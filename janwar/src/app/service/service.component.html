@@ -1,0 +1,80 @@
+<div class="test">
+
+    <div class="services">
+        <p>
+            Fill the form below to book the services
+        </p>
+        <label for="Services">Choose from the services given below: </label>
+        <div class="service">
+            <input type="checkbox" name="training" value="training" (input)="takeInput($event)"><label for="training">Training</label><br>
+            <input type="checkbox" name="grooming" value="grooming" (input)="takeInput($event)"><label for="grooming">Grooming</label><br>
+            <input type="checkbox" name="medcare" value="medcare" (input)="takeInput($event)"><label for="medcare">Medical care</label><br>
+            <input type="checkbox" name="socialize" value="socialize" (input)="takeInput($event)"><label for="socialize">Socialize</label><br>
+            <input type="checkbox" name="playing" value="playing" (input)="takeInput($event)"><label for="playing">Playing and Exercise</label><br>
+        </div>
+        <label for="fromto">Select the starting and ending date and time: </label><br>
+        <div class="datetime">
+            <label for="start">Start: </label><input type="datetime-local" name="from" value="from" (input)="takeInput($event)"><br>
+            <label for="end">End: </label><input type="datetime-local" name="to" value="to" (input)="takeInput($event)">
+        </div>
+        <div class="address">
+            <label for="outlet">Select the Outlet: </label>
+            <select name="location" id="location" (change)="takeInput($event)">
+                <option value="sct">Select the Location</option>
+                <option value="Jalahalli Cross">Jalahalli Cross</option>
+                <option value="Koramangala">Koramangala</option>
+                <option value="Malleshwaram">Malleshwaram</option>
+                <option value="Rajajinagar">Rajajinagar</option>
+                <option value="New Bel Road">New Bel Road</option>
+                <option value="Indiranagar">Indiranagar</option>
+                <option value="WhiteField">WhiteField</option>
+            </select>
+        </div>
+        <div class="btn">
+            
+            <button (click)="submitted($event)" >Submit</button>
+            <button (click)="navigateBack()" >Go back</button>
+        </div>
+    </div>
+    <h1>Appointments</h1>
+    <div class="apps">
+        <div class="app">
+            <h2>From</h2>
+            <h2>To</h2>
+            <h2>Service</h2>
+            <h2>Location</h2>
+        </div>
+        
+        <div class="app" *ngFor="let app of appointments">
+            <p>
+                
+                {{app.from}}
+            </p>
+            <p>
+                
+                {{app.to}}
+            </p>
+            <p>
+                
+                {{app.services}}
+            </p>
+            <p>
+                {{app.location}}
+                
+            </p>
+        </div>
+    </div>
+    
+</div>
+    <lib-toastify-toast-container 
+    [position]="'bottom-right'" 
+    [transition]="'zoom' "
+    [autoClose]="3000" 
+    [hideProgressBar]="false" 
+    [newestOnTop]="false"  
+    [closeOnClick]="true" 
+    [pauseOnHover]="true" 
+    [pauseOnVisibilityChange]="true"   
+    
+    ></lib-toastify-toast-container>
+    

@@ -1,0 +1,37 @@
+<div class="title">
+    <div class="regform" id="registration">
+        <form action="">
+            <h1>
+                Registration form
+            </h1>
+
+                
+                <input type="text" placeholder="Enter your Name" name="name" (input)="takeInput($event)"  required>
+                <input type="text" placeholder="Pet Name" name="pname" (input)="takeInput($event)" required>
+                <input type="email" placeholder="Email-id" name="email" (input)="takeInput($event)" required>
+                <input type="digit" placeholder="Phone Number" name="phnumber" (input)="takeInput($event)" required>
+                <input type="password" placeholder="Set Password" name="spassword" (input)="takeInput($event)" required>
+                <input type="password" placeholder="Confirm Password" name="cpassword" (input)="takeInput($event)" required>
+                <input type="text" placeholder="Pet Type" name="ptype" (input)="takeInput($event)" required>
+                <input type="text" placeholder="Pet Breed" name="pbreed" (input)="takeInput($event)" required>
+            
+            <button type="submit" (click)="onClick($event)">Submit</button>
+            <button type="reset">Reset</button>
+        </form>
+        <div>
+            <h1>Already have an Account?</h1>
+            <button routerLink="/login">Login</button>
+        </div>
+    </div>
+</div>
+<lib-toastify-toast-container 
+[position]="'bottom-right'" 
+[transition]="'zoom' "
+[autoClose]="3000" 
+[hideProgressBar]="false" 
+[newestOnTop]="false"  
+[closeOnClick]="true" 
+[pauseOnHover]="true" 
+[pauseOnVisibilityChange]="true"   
+
+></lib-toastify-toast-container>

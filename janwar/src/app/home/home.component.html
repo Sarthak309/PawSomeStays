@@ -1,0 +1,41 @@
+
+
+<div class="navbar">
+    <h1 >Pawsome Stay</h1>
+    <div>
+
+        <h3 class="aboat" >About</h3>
+        <h3 class="contac">Contact Us</h3>
+        <h3 class="services" routerLink = "/service">Services</h3>
+    </div>
+    <h2 (click)="logout()">Logout</h2>
+</div>
+
+<div class="about">
+    <p>Welcome to our pet boarding app! We understand that pets are an important part of your family, and when you need to go out of town, it can be tough to find a reliable and trustworthy place to leave them. That's where we come in. <br>
+
+        Our pet boarding app is designed to make your life easier and your pet's stay more comfortable. We offer a range of services, including overnight boarding, day care, and grooming. Our facilities are clean, safe, and staffed by experienced and caring professionals who love animals as much as you do. <br>
+        
+        We know that every pet is unique, which is why we offer personalized care tailored to your pet's needs. From special diets to medication schedules, we make sure that your pet is well taken care</p>
+    <img src="../../assets/images/banner.png" alt="doggo">
+</div>
+
+<div class="con">
+    <img src="../../assets/images/hdpussypic.png" alt="">
+    <div class="contact">
+        <h1 class="contat">Feedback</h1>
+        <form action="">
+            <input type="text" placeholder="Name" name="name" (input) = "takeInput($event)">
+            <input type="text" placeholder="Email-id" name="email" (input) = "takeInput($event)">
+            <input type="text" placeholder="Write Yout valuable Feedback" class="feed" name="feedback" (input) = "takeInput($event)">
+            <button (click)="onClick($event)"> Send feedback</button>
+        </form>
+    </div>
+</div>
+
+<div class="link">
+    <h1>A Premium FurBnB</h1>
+
+    <a href="https://www.linkedin.com/in/sarthak-agrawal-4bb009202/" target="_blank">Linkedin</a>
+    <a href="https://github.com/Sarthak309/Sarthak309" target="_blank">GitHub</a>
+</div>

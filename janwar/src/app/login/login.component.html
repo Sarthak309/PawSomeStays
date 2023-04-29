@@ -1,0 +1,21 @@
+<div class="title">
+    <div class="logform" id="login">
+        <div class="form">
+            
+            <form action="">
+                <h1>
+            
+                    Login Form
+                </h1>
+                <input type="email" placeholder="Email-id" name="email" (input) = "takeInput($event)">
+                <input type="password" placeholder="Password" name="spassword" (input) = "takeInput($event)" >
+                <button type="submit" (click)="onClick($event)">Submit</button>
+                <button routerLink="/forgotPassword">Forgot Password??</button>
+            </form>
+        </div>
+        <div class="new">
+            <h1>New User?</h1>
+            <button routerLink = "/registration">New User?</button>
+        </div>
+    </div>
+</div>
